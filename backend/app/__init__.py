@@ -51,3 +51,8 @@ def create_app():
         return {'db': db, 'ContactSubmission': ContactSubmission}
 
     return app
+
+# Ensure the app listens on 0.0.0.0 and port 5000 for external connections
+if __name__ == "__main__":
+    app = create_app()
+    app.run(host="0.0.0.0", port=5000)
