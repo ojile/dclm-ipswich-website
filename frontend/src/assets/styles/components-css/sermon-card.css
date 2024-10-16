@@ -1,0 +1,376 @@
+/* Navbar Styles */
+.navbar {
+  height: 50px;
+  background-color: #0056b3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1030;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-brand {
+  font-size: 16px;
+  color: white;
+}
+
+.navbar-nav .nav-link {
+  padding: 10px 15px;
+  font-size: 14px;
+  color: white;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-nav .nav-link.active,
+.dropdown-menu .dropdown-item.active {
+  background-color: #0056b3;
+  color: white;
+  border-radius: 4px;
+}
+
+/* Dropdown menu interaction */
+.navbar-nav .dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+  border-radius: 4px;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1000;
+}
+
+.nav-item.dropdown:hover .dropdown-menu,
+.nav-item.dropdown .dropdown-menu:hover {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.nav-item .dropdown-menu a {
+  color: #333;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+
+.nav-item .dropdown-menu a:hover {
+  background-color: #f0f0f0;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 992px) {
+  .navbar-nav .dropdown-menu {
+    position: relative;
+    display: block;
+    opacity: 1;
+    transform: none;
+    margin: 0;
+    box-shadow: none;
+  }
+}
+
+/* Hero Section Styles */
+.hero-section {
+  position: relative;
+  height: 100vh;
+  background: url('../../images/DLCM.png') no-repeat center center fixed; /* Replace with your image path */
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Overlay for better text contrast */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-overlay h1 {
+  font-size: 3rem; /* Responsive font size */
+  margin: 0;
+  animation: fadeIn 1s ease forwards; /* Animation */
+}
+
+.hero-overlay p {
+  font-size: 1.5rem; /* Responsive font size */
+  margin: 20px 0;
+  animation: fadeIn 1s ease forwards 0.5s; /* Delayed animation */
+}
+
+.cta-button {
+  padding: 10px 20px;
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #003d80;
+}
+
+/* Content Section Styles */
+.content-section {
+  padding: 40px 20px;
+  background-color: #f9f9f9; /* Light background color */
+}
+
+.latest-sermons {
+  text-align: center; /* Center text for Latest Sermons */
+  background-color: #ffffff; /* Background color for the sermon section */
+  padding: 40px 20px; /* Padding around the sermon cards */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+}
+
+h2 {
+  margin: 30px 0;
+  font-size: 2rem;
+}
+
+/* Carousel Styles */
+.sermon-carousel {
+  position: relative; /* Required for positioning arrows */
+}
+
+.slick-slider {
+  display: flex;
+}
+
+.slick-prev,
+.slick-next {
+  background-color: #0056b3;
+  color: white;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1; /* Ensure arrows are on top */
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  background-color: #003d80; /* Darker on hover */
+}
+
+/* Card styles for SermonCard */
+.sermon-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Slight shadow */
+  padding: 20px; /* Add padding inside the card */
+  margin: 20px 0; /* Margin between cards */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.sermon-card:hover {
+  transform: translateY(-10px); /* Slight lift on hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Slightly stronger shadow on hover */
+}
+
+.sermon-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.sermon-card p {
+  margin: 5px 0;
+}
+
+.sermon-card strong {
+  font-weight: bold;
+}
+
+/* YouTube Video Overlay Styles */
+.sermon-card iframe {
+  width: 100%;
+  height: auto; /* Ensure iframe maintains aspect ratio */
+}
+
+.sermon-card .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white; /* Text color for overlay */
+  background: rgba(0, 0, 0, 0.5); /* Background for better visibility */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease; /* Fade in on hover */
+}
+
+.sermon-card:hover .overlay {
+  opacity: 1; /* Show overlay on hover */
+}
+
+/* View All Button */
+.view-all-section {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.view-all-btn {
+  padding: 10px 20px;
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none; /* Remove underline */
+  transition: background-color 0.3s ease;
+}
+
+.view-all-btn:hover {
+  background-color: #003d80;
+}
+
+/* Card Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Form and Contact styles */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-bottom: 80px; /* Add margin to create space from the footer */
+}
+
+
+form input,
+form textarea {
+  padding: 10px;
+  margin: 10px 0;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  margin-top: 10px;
+}
+
+/* Ensure that the App fills the entire viewport */
+.footer-fixed-bottom {
+  position: relative; /* Relative positioning to take space in normal flow */
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  padding: 24px;
+  max-width: 10;
+  font-size: 12px;
+  background-color: #343a40; /* Optional: Dark background for the footer */
+  color: #ffffff; /* Optional: White text color */
+}
+
+/* Contact Form Styles */
+.contact-container {
+  max-width: 600px; /* Limit the width for better readability */
+  margin: 0 auto; /* Center the container */
+  padding: 20px; /* Add some padding */
+  background-color: #f9f9f9; /* Light background color */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.contact-container h1 {
+  font-size: 2rem; /* Larger font size for the header */
+  margin-bottom: 20px; /* Space below the header */
+}
+
+.contact-container form {
+  display: flex; /* Use flexbox for alignment */
+  flex-direction: column; /* Stack the elements */
+}
+
+.contact-container form input,
+.contact-container form textarea {
+  margin: 10px 0; /* Space between inputs */
+  padding: 10px; /* Add padding */
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.contact-container form button {
+  margin-top: 10px; /* Space above the button */
+  padding: 10px; /* Add padding */
+  background-color: #0056b3; /* Button color */
+  color: white; /* Text color */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer on hover */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.contact-container form button:hover {
+  background-color: #003d80; /* Darker on hover */
+}
+
+/* Footer Styles */
+footer {
+  padding: 20px;
+  background-color: #343a40; /* Dark background for footer */
+  color: white; /* White text color */
+  text-align: center; /* Center the text */
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.sermon-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}

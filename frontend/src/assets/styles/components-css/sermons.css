@@ -1,0 +1,107 @@
+/* Sermons Container */
+.sermons-container {
+  padding: 2rem;
+  background-color: #f9f9f9;
+  font-family: 'Arial', sans-serif;
+  min-height: calc(100vh - 60px); /* Ensure sermons container takes full height minus footer */
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  justify-content: space-between; /* Space between content and footer */
+}
+
+/* Sermons Header */
+.sermons-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Sermon Title */
+.sermon-title {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+/* Sermon Subtitle */
+.sermon-subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+/* CTA Button */
+.cta-button {
+  background-color: #007bff;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  align-self: center; /* Center button horizontally */
+  margin-top: auto; /* Push the button to the bottom */
+}
+
+.cta-button:hover {
+  background-color: #0056b3;
+}
+
+/* Sermons List */
+.sermons-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Error Container */
+.error-container {
+  text-align: center;
+  color: red;
+  margin: 2rem 0;
+}
+
+/* Loading Container */
+.loading-container {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+/* No Sermons Message */
+.no-sermons-message {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #888;
+}
+
+/* Retry Button */
+.retry-button {
+  background-color: #f44336;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.retry-button:hover {
+  background-color: #d32f2f;
+}
+
+/* Footer for Sermons */
+.sermons-footer {
+  text-align: center;
+  margin-top: 2rem;
+  padding-bottom: 20px; /* Add padding to ensure no overlap */
+}
+
+/* Optional: Make the footer sit at the bottom of the page */
+footer {
+  position: relative;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: auto; /* Push the footer to the bottom */
+}

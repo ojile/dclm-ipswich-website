@@ -1,0 +1,79 @@
+/* Main Container for Events */
+.events-container {
+  width: 100%; 
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Flexbox for Events List */
+.events-list {
+  display: flex;
+  overflow-x: auto;
+  padding: 10px 0;
+  scroll-behavior: smooth;
+  gap: 30px;
+  position: relative;
+  margin-bottom: 60px; /* Ensure space for the footer */
+}
+
+/* Arrow Button Styles */
+.arrow-button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background 0.3s;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.arrow-button.left {
+  left: 10px;
+}
+
+.arrow-button.right {
+  right: 10px;
+}
+
+
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+/* Header Styles */
+.events-header {
+  text-align: center; /* Center the text horizontally */
+  margin-bottom: 20px; /* Space below the header */
+}
+
+.events-title {
+  font-size: 36px; /* Font size for the title */
+  margin: 0; /* Remove default margin */
+}
+
+.events-subtitle {
+  font-size: 18px; /* Font size for subtitle */
+  margin: 5px 0; /* Margin for spacing */
+}
+
+/* Additional Styles for Responsive Design */
+@media (max-width: 768px) {
+  .events-title {
+    font-size: 28px; /* Adjust title size for smaller screens */
+  }
+
+  .events-subtitle {
+    font-size: 16px; /* Adjust subtitle size for smaller screens */
+  }
+
+  .arrow-button {
+    padding: 8px 12px; /* Smaller padding for buttons on mobile */
+    font-size: 16px; /* Smaller font size for buttons on mobile */
+  }
+}

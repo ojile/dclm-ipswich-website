@@ -1,0 +1,53 @@
+# .gcloudignore file
+
+# Ignore Python compiled files
+*.pyc
+*.pyo
+__pycache__/
+
+# Ignore node_modules folder for frontend dependencies
+node_modules/
+
+# Ignore local environment variables and secrets
+.env
+*.env
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore logs and temporary files
+logs/
+*.log
+*.tmp
+*.swp
+*.swo
+
+# Ignore test files and coverage data
+tests/
+*.test.*
+*.spec.*
+coverage/
+.coverage
+
+# Ignore IDE configuration files
+.vscode/
+.idea/
+*.iml
+
+# Ignore Git and version control folders
+.git/
+.gitignore
+
+# Ignore Docker-related files (if not required for deployment)
+# .dockerignore
+# docker-compose.yml
+# Dockerfile
+
+# Ignore frontend build artifacts (if deploying separately)
+dist/
+build/
+
+# Ignore other specific project directories if not required for deployment
+# C:/Users/Lenovo/Desktop/dclm-ipswich-website/frontend/
+# C:/Users/Lenovo/Desktop/dclm-ipswich-website/backend/migrations/
+# C:/Users/Lenovo/Desktop/dclm-ipswich-website/backend/__pycache__/

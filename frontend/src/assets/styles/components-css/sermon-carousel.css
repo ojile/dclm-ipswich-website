@@ -1,0 +1,97 @@
+/* sermon-carousel.css */
+
+.sermon-carousel {
+  width: 100%;  /* Full width for the carousel */
+  margin: 0 auto;  /* Center the carousel */
+}
+
+.slick-slider {
+  position: relative;  /* Positioning for the arrows */
+}
+
+.slick-prev,
+.slick-next {
+  z-index: 1;  /* Ensure arrows are above other elements */
+  font-size: 24px;  /* Adjust arrow size */
+  color: #fff;  /* Arrow color */
+  background: rgba(0, 0, 0, 0.5);  /* Background for visibility */
+  border-radius: 50%;  /* Rounded arrow buttons */
+  width: 40px;  /* Width of arrows */
+  height: 40px;  /* Height of arrows */
+  display: flex;  /* Center the arrows */
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;  /* Slight transparency */
+}
+
+.slick-prev:before,
+.slick-next:before {
+  content: '';  /* Remove default arrow text */
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  background: rgba(0, 0, 0, 0.8);  /* Darker background on hover */
+}
+
+.slick-prev {
+  left: 10px;  /* Position left arrow */
+}
+
+.slick-next {
+  right: 10px;  /* Position right arrow */
+}
+
+.slick-dots {
+  bottom: 10px;  /* Position dots below the carousel */
+}
+
+.slick-dots li button:before {
+  font-size: 12px;  /* Dot size */
+  color: #fff;  /* Dot color */
+}
+
+.slick-dots li.slick-active button:before {
+  color: #f00;  /* Active dot color */
+}
+
+.slick-slide {
+  display: flex;  /* Use flex to align items */
+  justify-content: center;  /* Center content */
+}
+
+.video-container {
+  position: relative;  /* Position for overlay */
+  overflow: hidden;  /* Hide overflow for rounded corners */
+  border-radius: 8px;  /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Shadow for depth */
+}
+
+.video-container iframe {
+  width: 100%;  /* Full width for iframe */
+  height: 200px;  /* Fixed height for consistency */
+}
+
+.overlay {
+  position: absolute;  /* Overlay on top of video */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;  /* Center overlay content */
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);  /* Semi-transparent background */
+  color: #fff;  /* Text color */
+  opacity: 0;  /* Initially hidden */
+  transition: opacity 0.3s ease;  /* Smooth transition for hover effect */
+}
+
+.video-container:hover .overlay {
+  opacity: 1;  /* Show overlay on hover */
+}
+
+.card-content {
+  padding: 15px;  /* Padding for content */
+  text-align: center;  /* Center text */
+}

@@ -1,0 +1,117 @@
+.giving-container {
+  padding: 40px 20px; /* Added padding for better spacing */
+  text-align: center; /* Center align all text */
+  background-color: #f9f9f9; /* Light background for contrast */
+  min-height: 100vh; /* Ensures full height on small screens */
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #3498db; /* Header color */
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #666; /* Subtle color for subtitle */
+}
+
+.giving-section {
+  background: white; /* White background for sections */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  padding: 20px;
+  margin: 20px 0; /* Space between sections */
+  transition: transform 0.3s; /* Smooth hover effect */
+}
+
+.giving-section:hover {
+  transform: translateY(-3px); /* Lift effect on hover */
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #2980b9; /* Title color */
+}
+
+.section-description {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #555; /* Darker text for description */
+}
+
+.bank-details {
+  text-align: center; /* Center align bank details */
+  margin-bottom: 20px;
+}
+
+.bank-details p {
+  font-size: 1.1rem; /* Uniform font size for bank details */
+}
+
+.verse {
+  font-size: 1.1rem;
+  color: #777; /* Lighter color for verses */
+  margin-top: 10px;
+  font-style: italic;
+}
+
+.glorified {
+  font-size: 1.2rem; /* Larger font size for glorified scripture */
+  color: #3498db; /* Color to emphasize scripture */
+  font-weight: bold; /* Bold for emphasis */
+}
+
+.fixed-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50px; /* Set your desired height */
+  background-color: #3498db; /* Change to your preferred color */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.image-container {
+  position: relative; /* Position relative to contain the overlay */
+  max-width: 100%; /* Ensure the image is responsive */
+  margin-bottom: 30px; /* Spacing below the image */
+}
+
+.giving-image {
+  width: 100%; /* Responsive width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Rounded corners */
+}
+
+.overlay {
+  position: absolute; /* Positioning the overlay */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  color: #fff; /* White text */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  text-align: center; /* Center text */
+  padding: 1rem; /* Padding around the text */
+}
+
+.overlay-title {
+  font-size: 2rem; /* Larger font size for title */
+  margin: 0; /* Remove margin */
+}
+
+.overlay-text {
+  font-size: 1rem; /* Regular font size for text */
+  margin-top: 0.5rem; /* Spacing above the text */
+}

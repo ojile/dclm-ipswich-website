@@ -1,0 +1,94 @@
+/* about.css */
+
+.about-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  text-align: center; /* Centering text */
+}
+
+.about-header {
+  margin-bottom: 20px;
+}
+
+.church-logo {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
+.logo-caption {
+  font-style: italic;
+  font-size: 14px;
+  color: #777;
+}
+
+.about-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #3498db;
+}
+
+.about-intro {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+
+.about-section {
+  margin-bottom: 40px;
+}
+
+.about-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #3498db;
+}
+
+.about-section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0 auto; /* Center paragraph */
+}
+
+.doctrines-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.doctrines-list li {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.doctrines-list li strong {
+  color: #3498db;
+}
+
+.location {
+  margin-top: 40px;
+}
+
+.map-container {
+  margin: 20px auto; /* Centering Google Map */
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    padding: 15px;
+  }
+
+  .about-title {
+    font-size: 2rem;
+  }
+
+  .about-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-section p, .doctrines-list li {
+    font-size: 1rem;
+  }
+}

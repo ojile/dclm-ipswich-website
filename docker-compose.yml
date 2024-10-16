@@ -1,0 +1,79 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: testuser
+      POSTGRES_PASSWORD: testuser
+      POSTGRES_DB: dclm-ipswich-website-db-1
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - backend
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@example.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+      PGADMIN_CONFIG_SERVER_MODE: "False"
+    ports:
+      - "5050:80"
+    depends_on:
+      - db
+    networks:
+      - backend
+
+  flask-app:
+    restart: always
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    command: flask run --host=0.0.0.0
+    environment:
+      FLASK_APP: manage.py
+      FLASK_ENV: docker
+      DATABASE_URL: postgresql+psycopg2://testuser:testuser@db:5432/dclm-ipswich-website-db-1
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db
+    networks:
+      - backend
+
+  migrate:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    command: flask db upgrade
+    environment:
+      FLASK_APP: manage.py
+      FLASK_ENV: docker
+      DATABASE_URL: postgresql+psycopg2://testuser:testuser@db:5432/dclm-ipswich-website-db-1
+    depends_on:
+      - db
+    networks:
+      - backend
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    ports:
+      - "3000:3000"
+    networks:
+      - backend
+    stdin_open: true
+    tty: true
+
+volumes:
+  postgres_data:
+
+networks:
+  backend:

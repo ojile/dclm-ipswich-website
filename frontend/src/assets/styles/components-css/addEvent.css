@@ -1,0 +1,38 @@
+.add-event-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  min-height: calc(100vh - 60px); /* Full viewport height minus footer height (adjust this value based on footer size) */
+  padding: 20px; /* Add some padding */
+  padding-bottom: 100px; /* Add extra bottom padding to avoid overlap with the footer */
+}
+
+form {
+  width: 100%;
+  max-width: 400px; /* Limit form width for better appearance */
+  background-color: #f8f9fa; /* Light background for contrast */
+  padding: 20px;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.form-group {
+  margin-bottom: 15px; /* Space between form groups */
+}
+
+.error-message {
+  color: red; /* Red text for error messages */
+  margin-bottom: 15px; /* Space below the error message */
+}
+
+/* Optional: Style for the footer to ensure it's always at the bottom */
+footer {
+  position: relative; /* Ensure footer is relative to the content */
+  bottom: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}

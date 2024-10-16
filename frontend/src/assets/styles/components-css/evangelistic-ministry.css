@@ -1,0 +1,176 @@
+/* General Container */
+.evangelistic-ministry-container {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center;
+  width: 100%;
+  min-height: 100vh; /* Ensure the container takes full height */
+  padding-bottom: 100px; /* Extra padding to avoid footer overlap */
+}
+
+/* Hero Section */
+.evangelistic-hero-section {
+  position: relative;
+  height: 60vh;
+  background: url('../../images/evangelistic-outreach.jpg') no-repeat center center/cover;
+  background-attachment: fixed; /* Make background static while scrolling */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  margin: 0; /* Remove margin to eliminate spacing */
+  padding: 0; /* Remove padding if any */
+}
+
+/* Hero Overlay */
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-overlay h1 {
+  color: #fff;
+  font-size: 3em;
+  margin: 0;
+}
+
+.hero-overlay p {
+  color: #fff;
+  font-size: 1.5em;
+  margin: 10px 0;
+}
+
+/* Events Section */
+.evangelistic-events-header {
+  font-size: 2.5em;
+  text-align: center;
+  margin: 40px 0;
+  color: #d9534f;
+}
+
+.evangelistic-events-scroll-container {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the content horizontally */
+  width: 100%; /* Full width for the container */
+  position: relative; /* Position relative for absolute arrows */
+  margin-bottom: 20px; /* Space between scroll container and footer */
+}
+
+.arrow-button {
+  background-color: #d9534f;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  font-size: 1.5em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  z-index: 2; /* Ensure buttons are above cards */
+  align-self: center; /* Align arrow buttons to center vertically */
+  margin: 0 10px; /* Add horizontal space around the arrows */
+}
+
+.arrow-button:hover {
+  background-color: #b52d2a;
+}
+
+.evangelistic-events-list {
+  display: flex;
+  overflow-x: auto;
+  padding: 20px 0; /* Top and bottom padding for better spacing */
+  scroll-behavior: smooth;
+  justify-content: center; /* Center the event cards */
+  gap: 20px; /* Add spacing between the event cards */
+}
+
+.evangelistic-event-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  min-width: 300px;
+  max-width: 300px;
+  transition: transform 0.3s;
+  position: relative; /* Ensure it positions correctly */
+  z-index: 1; /* Ensure the card is above footer */
+  display: flex; /* Enable flexbox for the card layout */
+  flex-direction: column; /* Stack elements vertically */
+}
+
+.evangelistic-event-card:hover {
+  transform: translateY(-10px);
+}
+
+.evangelistic-event-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.evangelistic-event-card h3 {
+  color: #d9534f;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.evangelistic-event-card p {
+  font-size: 1em;
+  margin: 5px 0;
+}
+
+/* Event Card Content */
+.event-card-content {
+  display: flex; /* Use flexbox for alignment */
+  justify-content: space-between; /* Align items with space between */
+  align-items: center; /* Center items vertically */
+  margin-top: auto; /* Push this content to the bottom */
+}
+
+.view-details-button {
+  background-color: #d9534f;
+  color: #fff;
+  border: none;
+  padding: 10px 15px; /* Adjust padding for the button */
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.view-details-button:hover {
+  background-color: #b52d2a;
+}
+
+/* Footer Section */
+.evangelistic-ministry-footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #d9534f;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+}
+
+.evangelistic-ministry-footer p {
+  font-size: 1.2em; /* Font size for footer text */
+  margin: 0; /* No margin for footer text */
+}
+
+/* Content Area (optional) */
+.content {
+  flex: 1; /* Allows the content area to grow and fill available space */
+}

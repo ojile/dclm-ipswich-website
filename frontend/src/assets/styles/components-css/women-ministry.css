@@ -1,0 +1,113 @@
+/* Women Ministry Container */
+.women-ministry-container {
+  padding: 0;
+  text-align: center;
+  background-color: #f9f9f9;
+  min-height: 100vh; 
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers content vertically */
+}
+
+/* Hero Section Styles */
+.women-hero-section {
+  position: relative;
+  height: 60vh;
+  background: url('../../images/Women.IPEG') no-repeat center center/cover;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* Overlay Styles */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-overlay h1 {
+  font-size: 3rem;
+  margin: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+.hero-overlay p {
+  font-size: 1.5rem;
+  margin: 20px 0;
+  animation: fadeIn 1s ease forwards 0.5s;
+}
+
+/* Gallery Section */
+.women-gallery-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 40px 0;
+}
+
+.gallery-item {
+  width: 30%;
+  margin: 15px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+}
+
+/* Events Section */
+.women-events-scroll-container {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  margin: 20px 0;
+}
+
+.women-events-list {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px 0;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Footer Section */
+.women-ministry-footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+}

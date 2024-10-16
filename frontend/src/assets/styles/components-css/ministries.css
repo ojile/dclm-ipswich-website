@@ -1,0 +1,68 @@
+/* ministries.css */
+
+html, body {
+  height: 100%; /* Ensure full height */
+  margin: 0; /* Remove default margin */
+}
+
+body {
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack items vertically */
+}
+
+.ministries-container {
+  flex: 1; /* Allow this section to grow and fill available space */
+  padding: 0; /* Remove padding to eliminate spacing */
+  background-color: #f9f9f9; /* Light background for contrast */
+  text-align: center; /* Center text */
+  min-height: 100vh; /* Full height for smaller screens */
+  position: relative; /* For fixed footer */
+}
+
+.ministries-header {
+  margin: 40px 0; /* Adjust margin for spacing */
+}
+
+.ministries-header h1 {
+  font-size: 2.5rem; /* Adjust size for header */
+  color: #333; /* Dark text color */
+}
+
+.ministries-header p {
+  font-size: 1.2rem; /* Slightly larger font for subtitle */
+  color: #666; /* Grey for less emphasis */
+}
+
+.ministries-main {
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  align-items: center;
+}
+
+.ministries-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+  gap: 20px; /* Space between cards */
+  max-width: 1200px; /* Limit max width */
+  margin: 0 auto; /* Center the grid */
+  padding: 0 10px; /* Padding for responsiveness */
+}
+
+.no-ministries-message {
+  font-size: 1.2rem; /* Slightly larger for emphasis */
+  color: #999; /* Light grey color */
+  margin-top: 20px; /* Space from the top */
+}
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .ministries-header h1 {
+    font-size: 2rem; /* Smaller header size on mobile */
+  }
+
+  .ministries-header p {
+    font-size: 1rem; /* Smaller subtitle on mobile */
+  }
+}
