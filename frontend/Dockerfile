@@ -13,10 +13,13 @@ RUN npm install
 # Step 5: Copy the rest of the application code
 COPY . .
 
-# Step 6: Build the React app for production
+# Step 6: Ensure permissions for node_modules
+RUN chmod -R 755 /app
+
+# Step 7: Build the React app for production
 RUN npm run build
 
-# Step 7: Serve the app using a lightweight web server
+# Step 8: Serve the app using a lightweight web server
 FROM node:18-alpine
 
 # Set working directory for serving the build

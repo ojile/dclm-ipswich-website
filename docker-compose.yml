@@ -33,13 +33,14 @@ services:
     build:
       context: ./backend
       dockerfile: Dockerfile
-    command: flask run --host=0.0.0.0
+    command: >
+      sh -c "/wait_for_db.sh && flask run --host=0.0.0.0"
     environment:
       FLASK_APP: manage.py
       FLASK_ENV: docker
       DATABASE_URL: postgresql+psycopg2://testuser:testuser@db:5432/dclm-ipswich-website-db-1
     ports:
-      - "3000:3000"
+      - "5000:5000"
     depends_on:
       - db
     networks:
@@ -49,7 +50,8 @@ services:
     build:
       context: ./backend
       dockerfile: Dockerfile
-    command: flask db upgrade
+    command: >
+      sh -c "/wait_for_db.sh && flask db migrate -m 'Initial migration' && flask db upgrade"
     environment:
       FLASK_APP: manage.py
       FLASK_ENV: docker
